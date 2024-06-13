@@ -10,6 +10,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
+\yii\bootstrap5\BootstrapAsset::register($this);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -28,7 +29,8 @@ AppAsset::register($this);
 <header>
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        // 'brandLabel' => Yii::$app->name,
+        'brandLabel' => 'SMART Lab TMS',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
@@ -36,6 +38,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Task', 'url' => ['/task/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

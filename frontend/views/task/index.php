@@ -60,24 +60,24 @@ $this->params['breadcrumbs'][] = $this->title;
             //         ],
             //     ]),
             // ],            
-            [
-                'attribute' => 'userName',
-                'label' => 'User Name',
-                'value' => function ($model) {
-                    return $model->getUserName();
-                },
-                'filter' => Html::activeTextInput($searchModel, 'userName', ['class' => 'form-control']),
-            ],
+            // [
+            //     'attribute' => 'userName',
+            //     'label' => 'User Name',
+            //     'value' => function ($model) {
+            //         return $model->getUserName();
+            //     },
+            //     'filter' => Html::activeTextInput($searchModel, 'userName', ['class' => 'form-control']),
+            // ],
             'title',
             'task_details:ntext',
             'pending_task:ntext',
             
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Task $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'task_id' => $model->task_id]);
-                 }
-            ],
+            // [
+            //     'class' => ActionColumn::className(),
+            //     'urlCreator' => function ($action, Task $model, $key, $index, $column) {
+            //         return Url::toRoute([$action, 'task_id' => $model->task_id]);
+            //      }
+            // ],
         ],
     ]); ?>
 

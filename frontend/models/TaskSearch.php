@@ -1,10 +1,11 @@
 <?php
 
-namespace backend\models;
+namespace frontend\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Task;
+use frontend\models\Task;
 use yii\db\ActiveQuery;
 
 /**
@@ -45,7 +46,8 @@ class TaskSearch extends Task
      */
     public function search($params)
     {
-        $query = Task::find()->orderBy(['date' => SORT_DESC]);
+
+        $query = Task::find()->where(['user_id' => Yii::$app->user->identity->id])->orderBy(['date' => SORT_DESC]);
 
         // add conditions that should always apply here
         $query->joinWith(['user' => function (ActiveQuery $query) {
