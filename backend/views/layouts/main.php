@@ -73,11 +73,10 @@ AppAsset::register($this);
 
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
-        <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="float-end"><?= Yii::powered() ?></p>
+        <p class="float-start">&copy; <?= 'SMART Lab TMS' ?> <?= date('Y') ?></p>
+        <p class="float-end"><?= 'Developed by Ashutosh Ghimire' ?></p>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
