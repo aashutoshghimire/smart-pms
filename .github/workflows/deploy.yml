@@ -23,3 +23,6 @@ jobs:
         protocol: ftps
         local-dir: ./  # The local directory to upload
         server-dir: /  # The remote directory to upload to
+      retry:
+        max_attempts: 3  # Number of retry attempts
+        delay: 10s       # Delay between retries in seconds
