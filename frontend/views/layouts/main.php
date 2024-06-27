@@ -75,7 +75,7 @@ AppAsset::register($this);
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
         <p class="float-start">&copy; <?= 'SMART Lab TMS' ?> <?= date('Y') ?></p>
-        <p class="float-end"><?= 'Developed by Ashutosh Ghimire' ?></p>
+        <p class="float-end"><?= 'Developed by SMART Lab, WSU, Dayton' ?></p>
     </div>
 </footer>
 
