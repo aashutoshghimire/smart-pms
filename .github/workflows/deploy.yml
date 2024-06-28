@@ -26,3 +26,4 @@ jobs:
       retry:
         max_attempts: 3  # Number of retry attempts
         delay: 10s       # Delay between retries in seconds
+      continue-on-error: true  # Continue on error to allow retries
